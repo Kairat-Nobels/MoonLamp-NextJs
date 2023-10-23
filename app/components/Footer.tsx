@@ -40,7 +40,7 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <p className=" mt-8">© 2023 Moonlamp.com By Antonio Rogers</p>
+              <p className=" mt-8">© 2023 Moonlamp.com By Kairat-Nobels</p>
             </div>
           </div>
         </div>
