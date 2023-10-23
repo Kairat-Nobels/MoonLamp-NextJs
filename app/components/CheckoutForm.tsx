@@ -58,7 +58,7 @@ const CheckoutForm = ({ clientSecret }: { clientSecret: string }) => {
         if (!result.error) {
           cartStore.setCheckout("success");
 
-         
+
           fetch("/api/update-order-status", {
             method: "POST",
             headers: {
@@ -77,7 +77,7 @@ const CheckoutForm = ({ clientSecret }: { clientSecret: string }) => {
   return (
     <form className="text-gray-600" onSubmit={handleSubmit} id="payment-form">
       <PaymentElement id="payment-element" options={{ layout: "tabs" }} />
-      <h1 className="py-4 text-small font-bold">Total: {formattedPrice}</h1>
+      <h1 className="py-4 text-small font-bold">Total: {formattedPrice / 100}</h1>
       <button
         className={`py-2 mt-4 w-full bg-primary rounded-md text-white disabled:opacity-25`}
         id="submit"
