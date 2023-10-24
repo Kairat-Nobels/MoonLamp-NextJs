@@ -29,7 +29,7 @@ const Products = ({ name, image, unit_amount, id, description, quantity }: Produ
   };
 
   return (
-    <section className="py-20">
+    <section id="product" className="py-20">
       <div className="w-[89%] m-auto max-w-[1400px] grid grid-cols-1 md:grid-cols-2 items-center gap-5">
         {/* Left Side */}
         <div className="flex gap-4 items-center">

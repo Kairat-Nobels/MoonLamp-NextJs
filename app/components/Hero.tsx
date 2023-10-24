@@ -13,8 +13,8 @@ const Hero = () => {
             community
           </p>
           <div className="flex gap-5 mt-8">
-            <button className="bg-[#415a77] py-2 px-5 rounded-xl text-white">More Info</button>
-            <button className="bg-[#778da9] py-2 px-5 rounded-xl text-white">Buy Now</button>
+            <button className="bg-[#415a77] py-2 px-5 rounded-xl text-white"><a href="#product">More Info</a></button>
+            <button className="bg-[#778da9] py-2 px-5 rounded-xl text-white"><a href="#product">Buy Now</a></button>
           </div>
         </div>
         <div className="flex lg:justify-end justify-center items-center">

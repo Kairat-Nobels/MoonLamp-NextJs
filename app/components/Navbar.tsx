@@ -26,14 +26,16 @@ const Navbar = () => {
   const [openUserMenu, setOpenUserMenu] = useState(false);
 
   const { isSignedIn, user } = useUser();
+  const cartStore = useCartStore();
+  const wishlistStore = useWishlistStore();
 
   useEffect(() => {
-    if (openMobileMenu) {
+    if (openMobileMenu || !cartStore.isOpen) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "auto";
     }
-  }, [openMobileMenu]);
+  }, [openMobileMenu, cartStore.isOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,9 +53,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const cartStore = useCartStore();
-  const wishlistStore = useWishlistStore();
-
   const handleMobileMenu = () => {
     setOpenMobileMenu(!openMobileMenu);
   };
@@ -66,11 +65,10 @@ const Navbar = () => {
         </a>
 
         <ul
-          className={`md:flex items-center gap-8 md:static absolute text-gray-600  ${
-            openMobileMenu
-              ? "top-16 py-10 w-full bg-secondary left-0 text-center space-y-10 text-white drop-shadow-lg z-20"
-              : "hidden"
-          }`}
+          className={`md:flex items-center gap-8 md:static absolute text-gray-600  ${openMobileMenu
+            ? "top-16 py-10 w-full bg-secondary left-0 text-center space-y-10 text-white drop-shadow-lg z-20"
+            : "hidden"
+            }`}
         >
           <li>
             <a href="/" onClick={() => setOpenMobileMenu(false)}>

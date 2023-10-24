@@ -1,6 +1,5 @@
 import Image from "next/image";
 import moonlamp from "@/public/transparentmoonlamp.png";
-
 import { BsBatteryCharging } from "react-icons/bs";
 import { IoIosColorPalette } from "react-icons/io";
 import { AiFillGift, AiFillSafetyCertificate } from "react-icons/ai";

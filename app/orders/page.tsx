@@ -46,7 +46,7 @@ function OrdersPage() {
   }
 
   return (
-    <div className="w-[89%] m-auto flex flex-col gap-3">
+    <div className="w-[89%] p-3 m-auto flex flex-col gap-3">
       <div className="text-center my-10">
         <h2 className="font-bold text-2xl text-primary uppercase">Hello {user.username}!</h2>
         <p>Below are your recent orders</p>
@@ -56,7 +56,7 @@ function OrdersPage() {
       ) : (
         <>
           {orders.map((order, index) => (
-            <div key={index} className="bg-gray-200 p-5 rounded-lg">
+            <div key={index} className="bg-gray-200 p-3 rounded-lg">
               <p>Order ID: {order.id.replace(/\D/g, "")}</p>
               <p>Order Amount: {formatPrice(order.amount)}</p>
               <p>Order Date: {formatDate(order.createdDate)}</p>
