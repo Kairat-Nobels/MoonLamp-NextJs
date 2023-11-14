@@ -55,12 +55,14 @@ const Contact = () => {
                     type="text"
                     name="name"
                     id="name"
+                    required
                     className="border border-gray-300 text-gray-900 text-sm block w-full p-3"
                     placeholder="Your Name"
                   />
 
                   <input
                     type="email"
+                    required
                     className="border border-gray-300 text-gray-900 text-sm block w-full p-3"
                     id="email"
                     name="email"
@@ -71,6 +73,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="subject"
+                  required
                   id="subject"
                   placeholder="Subject"
                   className="border border-gray-300 text-gray-900 text-sm block w-full p-3"
@@ -81,6 +84,7 @@ const Contact = () => {
                   placeholder="Your Message"
                   name="message"
                   id="message"
+                  required
                   rows={3}
                   style={{ resize: "none" }}
                 ></textarea>
